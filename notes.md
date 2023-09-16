@@ -14,7 +14,7 @@ git commit
 
 Here is a link to the [README.md file](https://github.com/DapDerDapy/startup/blob/main/README.md)
 
-###Things I learned in this assignment###
+### Things I learned in this assignment ###
 
 * How to use VS code and Github together to commit changes and make adjustments to my repositories.
 * How to push and pull from VS Code.
