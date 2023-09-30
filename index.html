@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Tell browsers not to scale the viewport automatically -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Nite</title>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+  <body>
+    <!-- Use header, main, and footer elements to give semantic structure -->
+    <header>
+      <h1>To-Nite<sup>&reg;</sup></h1>
+
+      <!-- Navigation elements -->
+      <nav>
+        <!-- Menu is a semantic alternative to <ul> that represents an interaction -->
+        <menu>
+          <li><a href="index.html">Login</a></li>
+          <li><a href="timeline.html">Broswe as Guest</a></li>
+        </menu>
+      </nav>
+
+      <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
+      <hr />
+    </header>
+
+    <main>
+      <h1>Welcome</h1>
+      <p>Login to view</p>
+        <form action="timeline.html" method="post"> <!-- MODIFIED CODE FROM https://www.w3schools.com/howto/howto_css_login_form.asp-->
+            <div class="imgcontainer">
+                <img src="https://vectorified.com/images/generic-avatar-icon-12.jpg" width="50" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit">Login</button>
+                <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+            </div>
+            <div class="container" style="background-color: #f1f1f1;">
+                <span class = "register">New? Regsiter <a href="register.html">here</a></span>
+            </div>
+
+            <!--<div class="container" style="background-color:#f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div> THIS IS CODE I FOUND, I WON'T USE IT AS IS UNTIL I REALIZE HOW I WANT TO MODIFY IT-->
+        </form>
+    </main>
+
+    <footer>
+      <hr />
+      <span class="text-reset">Daniel Phillips</span>
+      <br />
+      <a href="https://github.com/DapDerDapy/startup/blob/main/README.md">GitHub Repository</a>
+    </footer>
+  </body>
+</html>
