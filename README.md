@@ -49,4 +49,13 @@ Have you ever been bored? Not known what to do? Have you ever wished that there 
 # Delivarables #
 To be updated as I learn more in class.
 
+## HTML Deliverables ##
++ **HTML pages** - 4 unique pages for logging in, viewing the timelines, registering, and viewing friends list
++ **Links** - Take you directly to Main Timeline when regsitering (Currenlty no data is stored, so logging in on an existing account does not work yet from the main page, but going to register or browsing as guest will take you there.) Connected pages for friends list also available when on main timeline.
++ **Text** - Events are shown with a title as well as a textual description
++ **Images** - Events in the timeline have a fun little picture associated based on the kind of event.
++ **Log in** - Input box for logging in (the way to log in is through registering, the home page login won't work until all the websocket + Database stuff is up and running)
++ **DataBase** - The events that appear on the timeline and the friends list come from Database
++ **WebSocket** - Friends list can be updated in real time (individual events on timeline will also show if friends are interested in going to an event)
+
 
