@@ -21,3 +21,8 @@ Here is a link to the [README.md file](https://github.com/DapDerDapy/startup/blo
 * How to use different writing things in making Github docs.
 * How to use Gitlens
 * How to use Bash and the terminal
+
+### HTML Notes ###
+* Remember to eventually change the "deployFiles.sh" to something else later
+* Use CodePen to test code in combination with CSS and JavaScript
+* Make sure to use the live server extension to see what it looks like from my development enviornment
