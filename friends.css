@@ -1,0 +1,185 @@
+:root {
+  --bs-body-bg: #D3A9E4; /* Your light purple background color */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  color: #000000;
+  background-color: var(--bs-body-bg) !important;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #9645b6, #7100f3);
+  animation: backgroundAnimation 5s linear infinite;
+  background-size: 200% 200%;
+}
+
+@media (max-height: 650px) {
+  header {
+    display: none;
+  }
+  footer {
+    display: none;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.title-text {
+  color: rgb(0, 0, 0);
+  text-align: left;
+}
+
+header {
+  background-color: #2b145d; /* Darker purple header background */
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+h1 {
+  text-align: left;
+  font-size: 2em;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+nav menu {
+  list-style: none;
+  text-align: left;
+}
+
+nav menu li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* Change to row for side-by-side forms */
+  justify-content: center; /* Distribute forms to left and right */
+  align-items: flex-start;
+  padding: 10px;
+}
+
+form {
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #542582; /* Purple form background color */
+  border-radius: 20px;
+  position: relative; /* Use relative positioning for both forms */
+  transform: none; /* Remove transform property to center them in their columns */
+}
+
+.container {
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Add Friend Box */
+#addFriendForm {
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #542582;
+  border-radius: 20px;
+  position: relative;
+}
+
+/* Pending Requests Box */
+#pendingRequestsForm {
+  max-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #542582;
+  border-radius: 20px;
+  position: relative;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 40px;
+  border-color: #7100f3;
+  color: #fff;
+}
+
+button {
+  background-color: #ff69b4; /* Pink button color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff4181; /* Lighter pink on hover */
+}
+
+footer {
+    background-color: #2b145d;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-text {
+  color: white;
+}
+
+a {
+  color: #ff69b4; /* Pink link color */
+  border-radius: 40px;
+  border-width: 30px;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff4181; /* Lighter pink on hover */
+}
+

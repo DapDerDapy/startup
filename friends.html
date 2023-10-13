@@ -6,11 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Nite</title>
     <link rel="icon" href="favicon.ico" />
+
+    <link rel="stylesheet" href="friends.css" />
+
+    <!-- Include bootstrap CSS framework -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+
+
+
+
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
     <header>
-      <h1>Add friends<sup>&reg;</sup></h1>
+      <h1>To-Nite<sup>&reg;</sup></h1>
 
       <!-- Navigation elements -->
       <nav>
@@ -25,24 +39,38 @@
     </header>
 
     <main>
-      <h1>Add Friend</h1>
-      <p></p>
-        <form action="#" method="post"> <!-- MODIFIED CODE FROM https://www.w3schools.com/howto/howto_css_login_form.asp-->
-            <div class="imgcontainer">
-            </div>
+      <div class="column">
+        <h2>Add Friend</h2>
+        <p></p>
+        <form action="#" method="post" id="addFriendForm">
+          <div class="imgcontainer">
+            <!-- Add an image for adding friends if needed -->
+          </div>
+          <div class="container" style=>
+                          <label for="uname"><b></b></label>
+                          <input type="text" placeholder="Enter friend's Username" name="uname" required>
 
-            <div class="container" style="border:2px solid #ccc">
-                <label for="uname"><b></b></label>
-                <input type="text" placeholder="Enter friend's Username" name="uname" required>
-
-                <button type="submit">Add</button>
-                <label>
-                </div>
+                          <button type="submit">Add</button>
+                          <label>
+                          </div>
+          <div class="container" >
+            <!-- Fields for adding friends -->
+          </div>
         </form>
+      </div>
 
-      <h1>Pending Requests</h1>
-      <p>You have 0 pending requests</p>
-
+      <div class="column">
+        <h2>Pending Requests</h2>
+        <p>You have 0 pending requests</p>
+        <form action="#" method="post" id="pendingRequestsForm">
+          <div class="imgcontainer">
+            <!-- Add an image for pending requests if needed -->
+          </div>
+          <div class="container" >
+            <!-- Fields for pending requests -->
+          </div>
+        </form>
+      </div>
     </main>
 
     <footer>
