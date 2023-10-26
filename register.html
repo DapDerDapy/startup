@@ -16,6 +16,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="signup.js"></script>
 
   </head>
   <body>
@@ -69,5 +70,41 @@
       <br />
       <a href="https://github.com/DapDerDapy/startup/blob/main/README.md">GitHub Repository</a>
     </footer>
+
+      <script>
+      function signup(event) {
+        event.preventDefault(); // Prevent the default form submission behavior.
+
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+        const passwordRepeat = document.querySelector("#password-repeat").value;
+
+        // Check if email and password fields are not empty.
+        if (email === "" || password === "" || passwordRepeat === "") {
+          alert("Please fill in all fields.");
+          return;
+        }
+
+        // Check if the password and its repeat match.
+        if (password !== passwordRepeat) {
+          alert("Passwords do not match. Please try again.");
+          return;
+        }
+
+        // Here, you can add code to further validate the email and password.
+        // For example, you can check if the email is in a valid format.
+
+        // If the email and password are valid, you can proceed.
+        localStorage.setItem("userEmail", email);
+        window.location.href = "play.html";
+      }
+
+      var signupForm = document.querySelector("#signup-form");
+      signupForm.addEventListener("submit", signup);
+    </script>
+
+
+
+
   </body>
 </html>

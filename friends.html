@@ -16,8 +16,8 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-
-
+    <script src="requestFriend.js"></script>
+    
 
 
   </head>
@@ -61,16 +61,37 @@
 
       <div class="column">
         <h2>Pending Requests</h2>
-        <p>You have 0 pending requests</p>
+        <p></p>
         <form action="#" method="post" id="pendingRequestsForm">
           <div class="imgcontainer">
             <!-- Add an image for pending requests if needed -->
           </div>
           <div class="container" >
+            <ul id-="pendingRequestsForm"></ul>
             <!-- Fields for pending requests -->
           </div>
         </form>
       </div>
+
+      <div class="column">
+        <h2>Friends List</h2>
+        <p></p>
+        <form action="#" method="post" id="friendsList">
+          <div class="imgcontainer">
+            <!-- Add an image for friends list if needed -->
+          </div>
+          <div class="container">
+            <ul class="friends-list">
+              <!-- Friend items will be added here -->
+            </ul>
+          </div>
+        </form>
+      </div>
+
+
+
+
+
     </main>
 
     <footer>

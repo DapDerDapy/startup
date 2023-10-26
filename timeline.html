@@ -17,6 +17,8 @@
       crossorigin="anonymous"
     />
 
+    <script src="like.js"></script>
+
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
@@ -39,20 +41,32 @@
     <main>
       <h1>Timeline - Provo UT</h1>
       <p>Events near you tonight:</p>
-      <div class="container" style="border:2px solid #ccc">
+      <div class="container" style="border: 2px solid #ccc">
         <section>
-          <h1>
-            <img src="https://www.clipartmax.com/png/small/0-9919_music-notes-clip-art-this-is-awesome-music-note.png" alt="Music Notes Clip Art This Is Awesome - Music Note @clipartmax.com" height="20">
-            7:30 P.M. - LIVE MUSIC at the Velour
-          </h1>
-          <p>Tickets are 10$. Come watch Beeson, Lazy Loners, and Swerved by Blondes.</p>
+          <div class="event-info">
+            <h1>
+              <img src="https://www.clipartmax.com/png/small/0-9919_music-notes-clip-art-this-is-awesome-music-note.png" alt="Music Notes Clip Art This Is Awesome - Music Note @clipartmax.com" height="20">
+              7:30 P.M. - LIVE MUSIC at the Velour -  
+                <div class="like-button">
+                <button onclick="like(this)">LIKE</button>
+                <span class="like-count">24</span>
+              </div>
+            </h1>
+            <p>Tickets are 10$. Come watch Beeson, Lazy Loners, and Swerved by Blondes.</p>
+          </div>
+        </section>
+      </div>
+
         </section>
       </div>
       <div class="container" style="border:2px solid #ccc">
         <section>
           <h1>
             <img src="https://media.istockphoto.com/id/1332226342/vector/hand-drawn-boombox-doodle-sketch-style.jpg?s=612x612&w=0&k=20&c=io8C4p-0qwIn80oti3ZF2wCbrm2FG1MtN-d44K3FUGE=" width="20" alt="Music" class="Music">
-            9:00 P.M. - Jimmy's Backyard Bash
+            9:00 P.M. - Jimmy's Backyard Bash - 
+              <div class="like-button">
+              <button onclick="like(this)">LIKE</button>
+              <span class="like-count">65</span>
           </h1>
           <p>123 Main street</p>
         </section>
@@ -61,7 +75,10 @@
         <section>
           <h1>
             <img src="https://static.vecteezy.com/system/resources/previews/002/877/059/non_2x/cartoon-illustration-of-shopping-bag-free-vector.jpg" width="15" alt="Music" class="Music">
-            6:00 P.M. - Startup Market
+            6:00 P.M. - Startup Market - 
+              <div class="like-button">
+              <button onclick="like(this)">LIKE</button>
+              <span class="like-count">12</span>            
           </h1>
           <p>Free admission! Shop local vendors with local vendors. With food truck and live music!</p>
         </section>

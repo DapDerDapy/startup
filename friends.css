@@ -98,7 +98,7 @@ main {
 form {
   max-width: 300px;
   margin: 20px;
-  padding: 20px;
+  padding: 200px;
   background-color: #542582; /* Purple form background color */
   border-radius: 20px;
   position: relative; /* Use relative positioning for both forms */
@@ -122,13 +122,150 @@ form {
 }
 
 /* Pending Requests Box */
+
 #pendingRequestsForm {
   max-width: 300px;
-  margin: 20px;
+  margin: 20px 20px 20px 0; /* Add right margin to create space */
   padding: 20px;
-  background-color: #542582;
+  background-color: #542582; /* Purple form background color */
   border-radius: 20px;
   position: relative;
+}
+
+#pendingRequestsForm ul {
+  list-style: none;
+  padding: 0;
+}
+
+#pendingRequestsForm ul li {
+  background-color: #663399; /* A shade of purple for list items */
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+#pendingRequestsForm ul li::before {
+  content: "👋"; /* Add a handwave emoji before each request */
+  margin-right: 10px;
+}
+
+#pendingRequestsForm ul li:hover {
+  background-color: #542582; /* Darker purple on hover */
+  transition: background-color 0.3s ease;
+}
+
+.accept-button,
+.reject-button {
+  background-color: blue; /* Change to your desired color */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+#pendingRequestsForm ul li .accept-button,
+#pendingRequestsForm ul li .reject-button {
+  background-color: #007bff; /* Blue color for buttons */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+#pendingRequestsForm ul li .accept-button:hover,
+#pendingRequestsForm ul li .reject-button:hover {
+  background-color: #0056b3; /* Lighter blue on hover */
+}
+
+.requests-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #542582;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.requests-list button {
+  background-color: #ff69b4; /* Pink button color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.requests-list button:hover {
+  background-color: #ff4181; /* Lighter pink on hover */
+}
+
+#friendsList {
+  max-width: 300px;
+  margin: 20px 0; /* Add margin for space */
+  padding: 20px;
+  background-color: #542582; /* Purple form background color, matching other boxes */
+  border-radius: 20px;
+  position: relative;
+}
+
+#friendsList h2 {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+#friendsList .container {
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
+
+#friendsList .friends-list {
+  list-style: none;
+  padding: 0;
+}
+
+#friendsList .friends-list li {
+  background-color: #542582; /* Purple background for friend list items, matching the box color */
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#friendsList .friend-box {
+  background-color: #66cc66; /* Green background for the names */
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-right: 10px; /* Add margin between friend boxes */
+}
+
+#friendsList button {
+  background-color: #ff69b4; /* Pink button color for Friends List */
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#friendsList button:hover {
+  background-color: #ff4181; /* Lighter pink on hover */
 }
 
 label {

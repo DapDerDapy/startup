@@ -17,6 +17,7 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <script src="login.js"></script>
 
   </head>
   <body>
@@ -39,18 +40,18 @@
     </header>
 
     <main>
-      <form action="timeline.html" method="post">
+      <form id="login-form" style="border: 2px solid #ccc">
         <h2>To-Nite</h2>
         <p>Welcome! Login to view!</p>
 
         <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
+          <label for="username"><b>Username</b></label>
+          <input type="text" id="username" placeholder="Enter Username" name="username" required>
 
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
+          <label for="password"><b>Password</b></label>
+          <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
-          <button type="submit">Login</button>
+          <button class="btn btn-primary" type="button" onclick="login()">Login</button>
 
           <label>
             <input type="checkbox" checked="checked" name="remember"> Remember me

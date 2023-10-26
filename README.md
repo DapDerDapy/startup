@@ -59,3 +59,17 @@ To be updated as I learn more in class.
 + **WebSocket** - Friends list can be updated in real time (individual events on timeline will also show if friends are interested in going to an event)
 
 
+## CSS Deliverables ##
++ **Header, footer, and main content**
++ **Navigation Elements** - Change based on current page, maintain consistent format
++ **Responsive to Window Resizing** - Looks good on a phone, and any size screen, except for when it is compressed horizontally to the extreme.
++ **Application elements** - Specific color scheme, utlizes contrast and space
++ **Application text content** - consistency in font.
++ **Application images** - I have a few images, but I'm going to change them!!! I want to find transparent clipart but I've been strugging with that. The images also will change based on user interaction, so JavaScript is going to be key.
+
+
+## JavaScript Deliverables ##
++ **login** - Using the REGISTER page will allow access to timeline. Login won't work until data can be stored to the server.
++ **database** - Displays how many likes post have. User can like posts! For now this is placeholder until social interactivity gets implemented
++ **WebSocket** - User functionality for friend requests implemented, including a new Friends list! With open to accept / reject friend requests, as well as remove friends from list.
++ **application logic** - Number of likes change based on user interaction, additional option to unlike, and the number of likes goes down.

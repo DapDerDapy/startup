@@ -26,3 +26,8 @@ Here is a link to the [README.md file](https://github.com/DapDerDapy/startup/blo
 * Remember to eventually change the "deployFiles.sh" to something else later
 * Use CodePen to test code in combination with CSS and JavaScript
 * Make sure to use the live server extension to see what it looks like from my development enviornment
+
+### CSS NOTES ###
+* Make sure to think about the screen size of my startup, use "flex" and other things to make it more appealing
+* Don't be afraid to add animations!
+* Edit every single element, make everything intentional, and be specific
