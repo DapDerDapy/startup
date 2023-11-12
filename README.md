@@ -73,3 +73,11 @@ To be updated as I learn more in class.
 + **database** - Displays how many likes post have. User can like posts! For now this is placeholder until social interactivity gets implemented
 + **WebSocket** - User functionality for friend requests implemented, including a new Friends list! With open to accept / reject friend requests, as well as remove friends from list.
 + **application logic** - Number of likes change based on user interaction, additional option to unlike, and the number of likes goes down.
+
+
+## Service Deliverable ##
++ **Node.js/Express HTTP service** - All done!
++ **Static middleware for frontend** - done!
++ **3rd party service endpoints** -  I couldn't think of any way to implement this to add anything of real value to my website, so I have something calling random images, it's not used though for now.
++ **Backend service endpoints** - For now, using local storage Placeholders for login information. 
++ **Adding Posts! -Frontend service-** - Updated Javascript as well as HTML, and CSS files to allow for user to add posts to the timeline. I still need to impose a character limit on description and event name / time. 

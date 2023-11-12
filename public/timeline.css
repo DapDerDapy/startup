@@ -138,6 +138,49 @@ main {
   background-color: #8f00b3; /* Change the color slightly on hover */
 }
 
+#postForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+#postForm label {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #fff;
+}
+
+#postForm input,
+#postForm textarea,
+#postForm button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #331750;
+  border-radius: 5px;
+}
+
+#postForm button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#postForm button:hover {
+  background-color: #8f00b3;
+}
+
+/* Adjustments for responsiveness */
+@media screen and (max-width: 576px) {
+  #postForm input,
+  #postForm textarea,
+  #postForm button {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 768px) {
   /* Adjust the font size for smaller screens */
   .container section h1 {

@@ -18,6 +18,12 @@
     />
 
     <script src="like.js"></script>
+    <script src="addPost.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      loadPosts(); // Call loadPosts after the DOM has loaded
+    });
+    </script>
 
   </head>
   <body>
@@ -41,6 +47,26 @@
     <main>
       <h1>Timeline - Provo UT</h1>
       <p>Events near you tonight:</p>
+    <form id="postForm">
+      
+      <label for="eventTime">Event Time:</label>
+      <input type="text" id="eventTime" required />
+      
+ 
+      <label for="eventName">Event Name:</label>
+      <input type="text" id="eventName" required />
+
+
+      <label for="eventDescription">Event Description:</label>
+      <textarea id="eventDescription" required></textarea>
+
+      <button type="submit" onclick="addPost(event)">Add Post</button>
+    </form>
+
+
+  <!-- User input form -->
+    <div id="postsContainer"></div>
+    <!-- Existing posts -->
       <div class="container" style="border: 2px solid #ccc">
         <section>
           <div class="event-info">
