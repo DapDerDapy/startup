@@ -86,3 +86,9 @@ To be updated as I learn more in class.
 + **MongoDB Atlas database Created** - All done!
 + **Endpoints for data** - Data gets processed and retrieved from Mongo
 + **Stores data in MongoDB** - Done!
+
+## Login Delivarable ##
++ **User Registration** = Creates a new account in the database
++ **Existing User** = Can log in whence account is created
++ **Use MongoDB to store credentials** - Stores user name and encrypted password in database
++ **Restricted functionality** - It's a very easy switch to restrict functionality for unregistered users, (I would remove the "browse as guest" feature), but I'm going to hold off on that for ease of debugging for now.
