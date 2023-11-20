@@ -1,3 +1,4 @@
+
 async function loadPosts() {
   try {
     const response = await fetch('/api/posts');
@@ -17,36 +18,51 @@ async function loadPosts() {
   displayPosts(posts);
 }
 
-// Assuming posts are stored in an array called 'posts'
-//let posts = [];
-
-
-function addPost(event) {
-  // Prevent the default form submission behavior
+async function addPost(event) {
   event.preventDefault();
 
   const eventTime = document.getElementById('eventTime').value;
   const eventName = document.getElementById('eventName').value;
   const eventDescription = document.getElementById('eventDescription').value;
 
-  // Check if any field is empty before proceeding
   if (!eventTime || !eventName || !eventDescription) {
     alert('Please fill out all fields before adding a post.');
     return;
   }
-
+  
   const newPost = {
     eventTime,
     eventName,
     eventDescription,
-    // Add other properties as needed
   };
 
-  // Add the new post to the array
-  posts.unshift(newPost);
-  console.log('Posts after adding:', posts); // Log the posts array
-  // Call a function to update the HTML and display the posts
-  displayPosts();
+  posts.unshift(newPost)
+  displayPosts()
+
+  try{
+    const response = await fetch('api/post',{
+      method:'POST',
+      headers: {'content-type': 'application/json'},
+      body: JSON.stringify(newPost)
+    });
+    const posts = await response.json();
+    localStorage.setItem('posts', JSON.stringify(posts));
+  } catch {
+    this.updatePostsLocal(newPost);
+  }
+};
+
+async function updatePostsLocal(newPost){
+    let posts = [];
+    const postsText = localStorage.getItem('posts');
+    if (postsText) {
+      posts = JSON.parse(postsText);
+    }
+
+    posts.unshift(newPost);
+
+    localStorage.setItem('posts', JSON.stringify(posts));
+    displayPosts()
 }
 
   function displayPosts() {
@@ -74,6 +90,7 @@ function addPost(event) {
       container.appendChild(section);
 
       postsContainer.appendChild(container);
+
     }
   }
 

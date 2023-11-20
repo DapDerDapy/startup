@@ -80,4 +80,9 @@ To be updated as I learn more in class.
 + **Static middleware for frontend** - done!
 + **3rd party service endpoints** -  I couldn't think of any way to implement this to add anything of real value to my website, so I have something calling random images, it's not used though for now.
 + **Backend service endpoints** - For now, using local storage Placeholders for login information. 
-+ **Adding Posts! -Frontend service-** - Updated Javascript as well as HTML, and CSS files to allow for user to add posts to the timeline. I still need to impose a character limit on description and event name / time. 
++ **Adding Posts! -Frontend service-** - Updated Javascript as well as HTML, and CSS files to allow for user to add posts to the timeline. I still need to impose a character limit on description and event name / time.
+
+## DB Deliverable ##
++ **MongoDB Atlas database Created** - All done!
++ **Endpoints for data** - Data gets processed and retrieved from Mongo
++ **Stores data in MongoDB** - Done!

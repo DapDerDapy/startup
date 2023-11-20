@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -14,23 +15,20 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+let posts = [];
 // Assuming posts are stored in an array called 'posts'
-//let posts = [];
-
-// GetPosts
-apiRouter.get('/posts', (_req, res) => {
-  res.setHeader('Content-Type', 'application/json');
-  res.status(200).json(posts);
+// Get posts
+apiRouter.get('/posts', async (_req, res) => {
+  const posts = await DB.getPosts();
+  res.send(posts);
 });
 
 
 // SubmitPost
-apiRouter.post('/posts', (req, res) => {
-  const newPost = req.body;
-  posts.unshift(newPost); // Assuming you want to add the new post at the beginning of the array
-
-  // Send a response indicating success
-  res.status(201).json({ message: 'Post added successfully', posts });
+apiRouter.post('/post', async (req, res) => {
+  DB.addPostDB(req.body);
+  const posts = await DB.getPosts();
+  res.send(posts)
 });
 
 app.use((_req, res) => {
@@ -41,14 +39,3 @@ app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
 
-//const posts = []; // Store posts in memory. In a production environment, you would use a database.
-
-//apiRouter.post('/addPost', (req, res) => {
-  //const newPost = req.body; // Assuming your frontend sends the post data in the request body
-
-  // Add the new post to the array
-  //posts.unshift(newPost); // Add to the beginning of the array to show the latest post first
-
-  // Send a response indicating success
-  //res.status(200).json({ message: 'Post added successfully', posts });
-//});
