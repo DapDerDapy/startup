@@ -92,3 +92,9 @@ To be updated as I learn more in class.
 + **Existing User** = Can log in whence account is created
 + **Use MongoDB to store credentials** - Stores user name and encrypted password in database
 + **Restricted functionality** - It's a very easy switch to restrict functionality for unregistered users, (I would remove the "browse as guest" feature), but I'm going to hold off on that for ease of debugging for now.
+
+## Websocket Delivarable ##
++ **Backend listens for Websocket connection** - DONE!
++ **Frontedn makes WebSocket connection** - DONE!
++ **Data sent over Websocket connection** - DONE! (My database is acting up as of now so testing is difficult)
++ **Websocket data displayed** - DONE! Code is impletmented, at least. (once my database is fixed it should work as intended, has to be done outside of my backend)

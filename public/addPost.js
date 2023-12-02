@@ -36,6 +36,13 @@ async function addPost(event) {
     eventDescription,
   };
 
+
+  wss.clients.forEach(function each(client) {
+  if (client.readyState === WebSocket.OPEN) {
+    client.send('new post');
+  }
+  });
+  
   posts.unshift(newPost)
   displayPosts()
 
@@ -93,5 +100,6 @@ async function updatePostsLocal(newPost){
 
     }
   }
+
 
 loadPosts();
