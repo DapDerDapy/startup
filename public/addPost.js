@@ -1,4 +1,11 @@
 
+/*
+function showPendingApprovalMessage() {
+  alert("Your post is pending approval!");
+}
+*/
+
+
 async function loadPosts() {
   try {
     const response = await fetch('/api/posts');

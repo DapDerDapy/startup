@@ -1,0 +1,20 @@
+{
+  "name": "startup",
+  "version": "1.0.0",
+  "description": "Have you ever been bored? Not known what to do? Have you ever wished that there was an application that could tell you the best things going on near you? Concerts, parties, or any other events? The \"TONIGHT\" app will use the user's location, and tell them whatever events are going on in their area. People can post publicly, RSVP or buy tickets, or even create events of their own. Users can also get their event featured so that it gets promoted to a wider audience. A real timeline is always up to date so you can even prepare for events going on over the next few days too! A must for people traveling to other areas looking for something to do, or people interested in what's going on near them?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.14.2"
+  }
+}

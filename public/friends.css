@@ -1,6 +1,11 @@
 :root {
-  --bs-body-bg: #D3A9E4; /* Your light purple background color */
+  --dark-bg: #342b3b; /* Dark background for general use */
+  --accent-color: #4b0082; /* Main accent color (dark purple) */
+  --secondary-color: #2b145d; /* Secondary color (darker purple) */
+  --text-light: #ffffff; /* Light text color */
+  --button-hover: #6f42c1; /* Button hover color */
 }
+
 
 *{
     margin: 0;
@@ -9,15 +14,15 @@
 }
 
 body {
-  color: #000000;
-  background-color: var(--bs-body-bg) !important;
+  color: var(--text-light);
+  background-color: var(--dark-bg);
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #9645b6, #7100f3);
+  background: linear-gradient(135deg, #5a1972, #60e0af);
   animation: backgroundAnimation 5s linear infinite;
   background-size: 200% 200%;
 }
@@ -49,10 +54,10 @@ body {
 }
 
 header {
-  background-color: #2b145d; /* Darker purple header background */
+  background-color: var(--secondary-color);
   padding: 20px;
   text-align: center;
-  color: white;
+  color: var(--text-light);
 }
 
 h1 {
@@ -283,9 +288,15 @@ input[type="text"] {
   color: #fff;
 }
 
+input[type="text"], textarea {
+  background-color: #1c1c1c;
+  color: var(--text-light);
+  border: 1px solid var(--accent-color);
+}
+
 button {
-  background-color: #ff69b4; /* Pink button color */
-  color: #fff;
+  background-color: var(--accent-color);
+  color: var(--text-light);
   border: none;
   padding: 10px 20px;
   margin-top: 10px;
@@ -294,7 +305,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff4181; /* Lighter pink on hover */
+  background-color: var(--button-hover);
 }
 
 footer {

@@ -1,7 +1,8 @@
 /* Reset default browser styles */
 
 :root {
-  --bs-body-bg: #D3A9E4; /* Your light purple background color */
+  --bs-body-bg: #343a40; /* Dark gray background color */
+  --accent-color: #4b0082; /* Dark blue or purple accent color */
 }
 
 *{
@@ -11,7 +12,7 @@
 }
 
 body {
-  color: #000000; 
+  color: #ffffff; 
   background-color: var(--bs-body-bg) !important;
   font-family: Arial, sans-serif;
   text-align: center;
@@ -19,8 +20,8 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #9645b6, #7100f3);
-  animation: backgroundAnimation 5s linear infinite;
+  background: linear-gradient(135deg, #6a3093, #a044ff, #5f2c82, #49a09d, #5f2c82, #a044ff, #6a3093);
+  animation: backgroundAnimation 16s ease infinite;
   background-size: 200% 200%;
 }
 
@@ -34,15 +35,13 @@ body {
 }
 
 @keyframes backgroundAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0% { background-position: 0% 50%; }
+  17% { background-position: 100% 50%; }
+  34% { background-position: 0% 50%; }
+  51% { background-position: 100% 50%; }
+  68% { background-position: 0% 50%; }
+  85% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .title-text {
@@ -51,7 +50,7 @@ body {
 }
 
 header {
-  background-color: #2b145d; /* Darker purple header background */
+  background-color: #343a40; /* Darker purple header background */
   padding: 20px;
   text-align: center;
   color: white;
@@ -99,15 +98,17 @@ main {
 
 h1 {
   font-size: 1.5em;
+  color: white;
 }
+
 
 form {
   max-width: 300px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #542582; /* Purple form background color */
+  background-color: #343a40; /* Purple form background color */
   border-radius: 20px;
-  border-color: white;
+  border-color: var(--accent-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -129,13 +130,15 @@ input[type="password"] {
   padding: 10px;
   margin: 5px 0;
   border-radius: 4px;
-  border-color: #7100f3;
-  color: #fff;
+  border: 1px solid #7100f3; /* Updated border color for better visibility */
+  background-color: #ffffff; /* White background */
+  color: #333333; /* Dark gray text color */
 }
 
 
+
 button {
-  background-color: #ff69b4; /* Pink button color */
+  background-color: var(--accent-color); /* Pink button color */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -145,7 +148,7 @@ button {
 }
 
 button:hover {
-  background-color: #ff4181; /* Lighter pink on hover */
+  background-color: #563d7c; /* Lighter pink on hover */
 }
 
 .container {
@@ -159,7 +162,7 @@ button:hover {
 }
 
 footer {
-    background-color: #2b145d;
+    background-color: #343a40;
     padding: 20px;
     color: white;
     text-align: center;
@@ -179,5 +182,5 @@ a {
 }
 
 a:hover {
-  color: #ff4181; /* Lighter pink on hover */
+  color: #463d7c; /* Lighter pink on hover */
 }

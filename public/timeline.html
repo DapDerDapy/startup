@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Nite</title>
     <link rel="icon" href="favicon.ico" />
-
     <link rel="stylesheet" href="timeline.css" />
+    <link rel="stylesheet" href="ApprovalModal.css" />
 
     <!-- Include bootstrap CSS framework -->
     <link
@@ -20,6 +20,7 @@
     <script src="like.js"></script>
     <script src="login.js"></script>
     <script src="addPost.js"></script>
+    <script src="ApprovalModal.js"></script>
     <script>
     document.addEventListener('DOMContentLoaded', () => {
       loadPosts(); // Call loadPosts after the DOM has loaded
@@ -27,13 +28,11 @@
     </script>
     <script>
       const socket = new WebSocket('ws://localhost:3001');
-
       socket.addEventListener('message', function (event) {
         console.log('Message from server: ', event.data);
         loadPosts();
       });
     </script>
-
   </head>
   <body>
     <!-- Use header, main, and footer elements to give semantic structure -->
@@ -52,25 +51,35 @@
       <!-- Since we don't have the ability to style we use old style HTML to give some visual formatting -->
       <hr />
     </header>
-
     <main>
       <h1>Timeline - Provo UT</h1>
       <p>Events near you tonight:</p>
-    <form id="postForm">
-      
-      <label for="eventTime">Event Time:</label>
-      <input type="text" id="eventTime" required />
-      
- 
-      <label for="eventName">Event Name:</label>
-      <input type="text" id="eventName" required />
+      <button id="toggleFormButton">+ Create Post</button>
+        <form id="postForm" style = "display: none;">
+          
+          <label for="eventTime">Event Time:</label>
+          <input type="text" id="eventTime" required />
+          
+    
+          <label for="eventName">Event Name:</label>
+          <input type="text" id="eventName" required />
+
+          <label for="eventDescription">Event Description:</label>
+          <textarea id="eventDescription" required></textarea>
+
+          <button type="submit" onclick="handlePostSubmission(event)">Add Post</button>
+
+                  <div id="approvalModal" class="modal">
+        </form>
 
 
-      <label for="eventDescription">Event Description:</label>
-      <textarea id="eventDescription" required></textarea>
-
-      <button type="submit" onclick="addPost(event)">Add Post</button>
-    </form>
+        <div id="approvalModal" class="approval-modal" style="display: none;"></div>
+          <div class="modal-content">
+            <span class="modal-title">Approval Needed</span>
+            <button class="close-button" onclick="closeModal()">&times;</button>
+            <p>Your post is pending approval!</p>
+          </div>
+        </div>
 
 
   <!-- User input form -->
@@ -78,7 +87,6 @@
     <!-- Existing posts -->
       <div class="container" style="border: 2px solid #ccc">
         <section>
-          <div class="event-info">
             <h1>
               <img src="https://www.clipartmax.com/png/small/0-9919_music-notes-clip-art-this-is-awesome-music-note.png" alt="Music Notes Clip Art This Is Awesome - Music Note @clipartmax.com" height="20">
               7:30 P.M. - LIVE MUSIC at the Velour -  
@@ -89,9 +97,6 @@
             </h1>
             <p>Tickets are 10$. Come watch Beeson, Lazy Loners, and Swerved by Blondes.</p>
           </div>
-        </section>
-      </div>
-
         </section>
       </div>
       <div class="container" style="border:2px solid #ccc">
@@ -126,5 +131,47 @@
       <br />
       <a href="https://github.com/DapDerDapy/startup/blob/main/README.md">GitHub Repository</a>
     </footer>
+        <script>
+        function handlePostSubmission(event) {
+          event.preventDefault(); // Prevent form from submitting traditionally
+          showModal(); // Function to show the modal
+          addPost();
+        }
+
+        function showModal() {
+          var modal = document.getElementById('approvalModal');
+          modal.style.display = 'block';
+        }
+
+        function closeModal() {
+          var modal = document.getElementById('approvalModal');
+          modal.style.display = 'none';
+        }
+
+        </script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            var toggleButton = document.getElementById('toggleFormButton');
+            var form = document.getElementById('postForm');
+            
+            toggleButton.addEventListener('click', function() {
+              var isOpen = form.style.display === 'block';
+              form.style.display = isOpen ? 'none' : 'block';
+              toggleButton.textContent = (isOpen ? '+ ' : '- ') + 'Create Post';
+            });
+          });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const containers = document.querySelectorAll('.container');
+        containers.forEach((container, index) => {
+          // Delay each container's animation
+          container.style.animationDelay = `${index * 0.5}s`;
+        });
+      });
+
+    </script>
   </body>
 </html>

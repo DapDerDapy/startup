@@ -1,0 +1,73 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's above other elements */
+  color: black;
+}
+
+
+.approval-modal {
+  background-color: #342b3b; /* Dark background */
+  color: #ffffff; /* White text */
+  border: 1px solid #4b0082; /* Dark purple border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly more pronounced shadow */
+  animation: flyInLeft 0.5s ease-out;
+}
+
+.approval-modal .modal-header {
+  background-color: #2b145d; /* Darker purple header */
+  color: #ffffff; /* White text for header */
+}
+
+.approval-modal .modal-title {
+  font-size: 20px;
+
+}
+
+.approval-modal .close-button {
+  color: #fff; 
+}
+
+.approval-modal button {
+  background-color: #4b0082;
+  color: white;
+
+}
+
+.approval-modal button:hover {
+  background-color: #6f42c1;
+}
+
+@keyframes flyInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+.modal-backdrop {
+  animation: fadeIn 0.3s ease;
+}
+
+.modal {
+  animation: fadeIn 0.3s ease;
+}
+
