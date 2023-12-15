@@ -98,3 +98,9 @@ To be updated as I learn more in class.
 + **Frontedn makes WebSocket connection** - DONE!
 + **Data sent over Websocket connection** - DONE! (My database is acting up as of now so testing is difficult)
 + **Websocket data displayed** - DONE! Code is impletmented, at least. (once my database is fixed it should work as intended, has to be done outside of my backend)
+
+## React Deliverable ##
++ **bundled and transpiled** - A little confused on this, it works though!
++ **components** - react modal implemented when uploading a post!
++ **Router** - Updates in realtime!
++ **Hooks** - uses class properties instead of use state!
